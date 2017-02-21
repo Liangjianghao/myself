@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043D47591E5541EB0086ACE9 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D47581E5541EB0086ACE9 /* DBManager.m */; };
+		04783B9E1E5ABAF700501900 /* contentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04783B9D1E5ABAF700501900 /* contentModel.m */; };
 		04E78CE61E5408E400B80B57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E78CE51E5408E400B80B57 /* main.m */; };
 		04E78CE91E5408E400B80B57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E78CE81E5408E400B80B57 /* AppDelegate.m */; };
 		04E78CEC1E5408E400B80B57 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E78CEB1E5408E400B80B57 /* ViewController.m */; };
@@ -56,6 +58,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043D47571E5541EB0086ACE9 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		043D47581E5541EB0086ACE9 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		04783B9C1E5ABAF700501900 /* contentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contentModel.h; sourceTree = "<group>"; };
+		04783B9D1E5ABAF700501900 /* contentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contentModel.m; sourceTree = "<group>"; };
 		04E78CE11E5408E400B80B57 /* Myself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myself.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E78CE51E5408E400B80B57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04E78CE71E5408E400B80B57 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,6 +160,24 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		043D47561E5541D30086ACE9 /* FMDB封装 */ = {
+			isa = PBXGroup;
+			children = (
+				04783B9C1E5ABAF700501900 /* contentModel.h */,
+				04783B9D1E5ABAF700501900 /* contentModel.m */,
+				043D47571E5541EB0086ACE9 /* DBManager.h */,
+				043D47581E5541EB0086ACE9 /* DBManager.m */,
+			);
+			name = "FMDB封装";
+			sourceTree = "<group>";
+		};
+		043D47E11E559E7A0086ACE9 /* 日历 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "日历";
+			sourceTree = "<group>";
+		};
 		04E78CD81E5408E400B80B57 = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +266,7 @@
 		04E78D1F1E540B4A00B80B57 /* 功能 */ = {
 			isa = PBXGroup;
 			children = (
+				043D47561E5541D30086ACE9 /* FMDB封装 */,
 			);
 			name = "功能";
 			sourceTree = "<group>";
@@ -249,6 +274,7 @@
 		04E78D201E540B5000B80B57 /* 控件 */ = {
 			isa = PBXGroup;
 			children = (
+				043D47E11E559E7A0086ACE9 /* 日历 */,
 				04E78D441E540C7600B80B57 /* cntrolList.h */,
 				04E78D451E540C7600B80B57 /* cntrolList.m */,
 				04E78D3E1E540C4C00B80B57 /* ljhDatePickerBtn.h */,
@@ -614,6 +640,8 @@
 				04E78D461E540C7600B80B57 /* cntrolList.m in Sources */,
 				04E78D2E1E540B7C00B80B57 /* takePhotoViewController.m in Sources */,
 				04E78D421E540C4C00B80B57 /* ljhDatePickerBtn.m in Sources */,
+				043D47591E5541EB0086ACE9 /* DBManager.m in Sources */,
+				04783B9E1E5ABAF700501900 /* contentModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
