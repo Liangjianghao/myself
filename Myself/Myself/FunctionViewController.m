@@ -1,30 +1,26 @@
 //
-//  cntrolList.m
-//  模块
+//  FunctionViewController.m
+//  Myself
 //
-//  Created by mac on 17/2/14.
+//  Created by mac on 17/2/22.
 //  Copyright © 2017年 self. All rights reserved.
 //
 
-#import "cntrolList.h"
-#import "takePhotoViewController.h"
-#import "ButtonViewController.h"
-#import "textFieldVC.h"
-@interface cntrolList ()<UITableViewDataSource,UITableViewDelegate>
+#import "FunctionViewController.h"
+
+@interface FunctionViewController ()<UITableViewDataSource,UITableViewDelegate>
 {
-    NSMutableArray *dataArr;
+    NSArray *dataArr;
 }
 @end
 
-@implementation cntrolList
+@implementation FunctionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    dataArr=[NSMutableArray arrayWithObjects:@"按钮",@"拍照",@"输入框",@"", nil];
+    dataArr=@[@"人脸识别",@"语音识别",@"后台持续定位",@"地图",@"百度鹰眼",@"FMDB封装",@"ibeacon",@""];
     
     UITableView *myTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT) style:UITableViewStylePlain];
-    
     myTableView.delegate=self;
     myTableView.dataSource=self;
     [self.view addSubview:myTableView];
@@ -39,10 +35,9 @@
     static NSString *cellID=@"cellID";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        //        cell=[[[NSBundle mainBundle]loadNibNamed:@"BottleCell" owner:self options:nil]firstObject];
+        
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     }
-    //    [cell setModel:dataArr[indexPath.row]];
     cell.textLabel.text=dataArr[indexPath.row];
     cell.textLabel.textAlignment=NSTextAlignmentCenter;
     return cell;
@@ -55,43 +50,48 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    takePhotoViewController *takePhotoVC=[[takePhotoViewController alloc]init];
+
+    NSString *urlString;
     
-    ButtonViewController *buttonVC=[[ButtonViewController alloc]init];
-    
-//    textFieldListVC *textFieldListVC=[[textFieldListVC alloc]init];
-    textFieldVC *textFieldListVC=[[textFieldVC alloc]init];
     
     
     switch (indexPath.row) {
         case 0:
-            [self.navigationController pushViewController:buttonVC animated:YES];
-            
+            urlString= [NSString stringWithFormat:@"faceR://"];
             break;
         case 1:
-            [self.navigationController pushViewController:takePhotoVC animated:YES];
+            urlString= [NSString stringWithFormat:@"voiceR://"];
             
             break;
         case 2:
-            [self.navigationController pushViewController:textFieldListVC animated:YES];
-            
+            urlString= [NSString stringWithFormat:@"backlocation://"];
             break;
         case 3:
-            [self.navigationController pushViewController:takePhotoVC animated:YES];
+            urlString= [NSString stringWithFormat:@"voiceR://"];
             
             break;
         case 4:
-            [self.navigationController pushViewController:takePhotoVC animated:YES];
+            urlString= [NSString stringWithFormat:@"yingyan://"];
+            break;
+        case 5:
+            urlString= [NSString stringWithFormat:@"voiceR://"];
             
             break;
+        case 6:
+            urlString= [NSString stringWithFormat:@"faceR://"];
+            break;
+        case 7:
+            urlString= [NSString stringWithFormat:@"voiceR://"];
+            
+            break;
+
             
         default:
             break;
     }
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
     
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+
 }
 
 

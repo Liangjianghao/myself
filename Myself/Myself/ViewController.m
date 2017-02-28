@@ -17,6 +17,8 @@
 #import "mycell.h"
 
 #import "cntrolList.h"
+#import "FunctionViewController.h"
+#import "ViewListVC.h"
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *dataArr;
@@ -90,8 +92,9 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
         cntrolList *controlVC=[[cntrolList alloc]init];
+        FunctionViewController *functionVC=[[FunctionViewController alloc]init];
+        ViewListVC *viewLVC=[[ViewListVC alloc]init];
     
-
     
     
     switch (indexPath.row) {
@@ -100,11 +103,11 @@
             
             break;
         case 1:
-            [self.navigationController pushViewController:controlVC animated:YES];
+            [self.navigationController pushViewController:functionVC animated:YES];
             
             break;
-            //        case 2:
-            //            [self.navigationController pushViewController:controlVC animated:YES];
+        case 2:
+            [self.navigationController pushViewController:viewLVC animated:YES];
             //
             //            break;
             //        case 3:

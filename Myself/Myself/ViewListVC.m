@@ -1,30 +1,26 @@
 //
-//  cntrolList.m
-//  模块
+//  ViewListVC.m
+//  Myself
 //
-//  Created by mac on 17/2/14.
+//  Created by mac on 17/2/22.
 //  Copyright © 2017年 self. All rights reserved.
 //
 
-#import "cntrolList.h"
-#import "takePhotoViewController.h"
-#import "ButtonViewController.h"
-#import "textFieldVC.h"
-@interface cntrolList ()<UITableViewDataSource,UITableViewDelegate>
+#import "ViewListVC.h"
+
+@interface ViewListVC ()<UITableViewDelegate,UITableViewDataSource>
 {
-    NSMutableArray *dataArr;
+    NSArray *dataArr;
 }
 @end
 
-@implementation cntrolList
+@implementation ViewListVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    dataArr=[NSMutableArray arrayWithObjects:@"按钮",@"拍照",@"输入框",@"", nil];
-    
+    dataArr=@[@"ios+html",@"ios+luaview",@"",@""];
     UITableView *myTableView=[[UITableView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT) style:UITableViewStylePlain];
-    
     myTableView.delegate=self;
     myTableView.dataSource=self;
     [self.view addSubview:myTableView];
@@ -39,10 +35,10 @@
     static NSString *cellID=@"cellID";
     UITableViewCell *cell=[tableView dequeueReusableCellWithIdentifier:cellID];
     if (!cell) {
-        //        cell=[[[NSBundle mainBundle]loadNibNamed:@"BottleCell" owner:self options:nil]firstObject];
+        
         cell=[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     }
-    //    [cell setModel:dataArr[indexPath.row]];
+    
     cell.textLabel.text=dataArr[indexPath.row];
     cell.textLabel.textAlignment=NSTextAlignmentCenter;
     return cell;
@@ -55,44 +51,46 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    takePhotoViewController *takePhotoVC=[[takePhotoViewController alloc]init];
+    NSString *urlString;
     
-    ButtonViewController *buttonVC=[[ButtonViewController alloc]init];
-    
-//    textFieldListVC *textFieldListVC=[[textFieldListVC alloc]init];
-    textFieldVC *textFieldListVC=[[textFieldVC alloc]init];
     
     
     switch (indexPath.row) {
         case 0:
-            [self.navigationController pushViewController:buttonVC animated:YES];
-            
+            urlString= [NSString stringWithFormat:@"ios+html://"];
             break;
         case 1:
-            [self.navigationController pushViewController:takePhotoVC animated:YES];
+            urlString= [NSString stringWithFormat:@"ios+luaview://"];
             
             break;
         case 2:
-            [self.navigationController pushViewController:textFieldListVC animated:YES];
-            
+            urlString= [NSString stringWithFormat:@"backlocation://"];
             break;
         case 3:
-            [self.navigationController pushViewController:takePhotoVC animated:YES];
-            
-            break;
-        case 4:
-            [self.navigationController pushViewController:takePhotoVC animated:YES];
+            urlString= [NSString stringWithFormat:@"voiceR://"];
             
             break;
             
         default:
             break;
     }
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
+    // Dispose of any resources that can be recreated.
 }
 
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

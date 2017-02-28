@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		043D47591E5541EB0086ACE9 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 043D47581E5541EB0086ACE9 /* DBManager.m */; };
+		046058E41E6556040018FF0A /* ljhtextFieldWithList.m in Sources */ = {isa = PBXBuildFile; fileRef = 046058E31E6556040018FF0A /* ljhtextFieldWithList.m */; };
+		046058F11E655CC60018FF0A /* ljhPWtextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 046058F01E655CC60018FF0A /* ljhPWtextField.m */; };
+		046058F41E6560810018FF0A /* textFieldVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 046058F31E6560810018FF0A /* textFieldVC.m */; };
+		0463B07B1E5D2EBA00E6985C /* FunctionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463B07A1E5D2EBA00E6985C /* FunctionViewController.m */; };
+		0463B0871E5D3D0C00E6985C /* ViewListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463B0861E5D3D0C00E6985C /* ViewListVC.m */; };
 		04783B9E1E5ABAF700501900 /* contentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04783B9D1E5ABAF700501900 /* contentModel.m */; };
 		04E78CE61E5408E400B80B57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E78CE51E5408E400B80B57 /* main.m */; };
 		04E78CE91E5408E400B80B57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E78CE81E5408E400B80B57 /* AppDelegate.m */; };
@@ -60,6 +65,16 @@
 /* Begin PBXFileReference section */
 		043D47571E5541EB0086ACE9 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		043D47581E5541EB0086ACE9 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		046058E21E6556040018FF0A /* ljhtextFieldWithList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ljhtextFieldWithList.h; sourceTree = "<group>"; };
+		046058E31E6556040018FF0A /* ljhtextFieldWithList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ljhtextFieldWithList.m; sourceTree = "<group>"; };
+		046058EF1E655CC60018FF0A /* ljhPWtextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ljhPWtextField.h; sourceTree = "<group>"; };
+		046058F01E655CC60018FF0A /* ljhPWtextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ljhPWtextField.m; sourceTree = "<group>"; };
+		046058F21E6560810018FF0A /* textFieldVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textFieldVC.h; sourceTree = "<group>"; };
+		046058F31E6560810018FF0A /* textFieldVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textFieldVC.m; sourceTree = "<group>"; };
+		0463B0791E5D2EBA00E6985C /* FunctionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunctionViewController.h; sourceTree = "<group>"; };
+		0463B07A1E5D2EBA00E6985C /* FunctionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunctionViewController.m; sourceTree = "<group>"; };
+		0463B0851E5D3D0C00E6985C /* ViewListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewListVC.h; sourceTree = "<group>"; };
+		0463B0861E5D3D0C00E6985C /* ViewListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewListVC.m; sourceTree = "<group>"; };
 		04783B9C1E5ABAF700501900 /* contentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contentModel.h; sourceTree = "<group>"; };
 		04783B9D1E5ABAF700501900 /* contentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contentModel.m; sourceTree = "<group>"; };
 		04E78CE11E5408E400B80B57 /* Myself.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Myself.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,11 +186,96 @@
 			name = "FMDB封装";
 			sourceTree = "<group>";
 		};
-		043D47E11E559E7A0086ACE9 /* 日历 */ = {
+		043D47E11E559E7A0086ACE9 /* 自定义日历 */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = "日历";
+			name = "自定义日历";
+			sourceTree = "<group>";
+		};
+		046058E11E6555EC0018FF0A /* 输入框 */ = {
+			isa = PBXGroup;
+			children = (
+				046058F21E6560810018FF0A /* textFieldVC.h */,
+				046058F31E6560810018FF0A /* textFieldVC.m */,
+				046058E21E6556040018FF0A /* ljhtextFieldWithList.h */,
+				046058E31E6556040018FF0A /* ljhtextFieldWithList.m */,
+				04E78D401E540C4C00B80B57 /* ljhDatePickerTextField.h */,
+				04E78D411E540C4C00B80B57 /* ljhDatePickerTextField.m */,
+				046058EF1E655CC60018FF0A /* ljhPWtextField.h */,
+				046058F01E655CC60018FF0A /* ljhPWtextField.m */,
+			);
+			name = "输入框";
+			sourceTree = "<group>";
+		};
+		0463B0781E5D2E7B00E6985C /* 人脸识别 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "人脸识别";
+			sourceTree = "<group>";
+		};
+		0463B07C1E5D333200E6985C /* 语音识别 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "语音识别";
+			sourceTree = "<group>";
+		};
+		0463B07D1E5D333A00E6985C /* 后台持续定位 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "后台持续定位";
+			sourceTree = "<group>";
+		};
+		0463B07E1E5D338400E6985C /* 地图 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "地图";
+			sourceTree = "<group>";
+		};
+		0463B07F1E5D338A00E6985C /* 百度鹰眼 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "百度鹰眼";
+			sourceTree = "<group>";
+		};
+		0463B0801E5D339400E6985C /* Ibeacon */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Ibeacon;
+			sourceTree = "<group>";
+		};
+		0463B0811E5D33B100E6985C /* 遮罩层拍照 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "遮罩层拍照";
+			sourceTree = "<group>";
+		};
+		0463B0821E5D33BD00E6985C /* 多选拍照 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "多选拍照";
+			sourceTree = "<group>";
+		};
+		0463B0831E5D33EE00E6985C /* ios+luaview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "ios+luaview";
+			sourceTree = "<group>";
+		};
+		0463B0841E5D33F800E6985C /* ios+html */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "ios+html";
 			sourceTree = "<group>";
 		};
 		04E78CD81E5408E400B80B57 = {
@@ -259,6 +359,10 @@
 		04E78D1E1E540B4300B80B57 /* 视图 */ = {
 			isa = PBXGroup;
 			children = (
+				0463B0851E5D3D0C00E6985C /* ViewListVC.h */,
+				0463B0861E5D3D0C00E6985C /* ViewListVC.m */,
+				0463B0841E5D33F800E6985C /* ios+html */,
+				0463B0831E5D33EE00E6985C /* ios+luaview */,
 			);
 			name = "视图";
 			sourceTree = "<group>";
@@ -266,6 +370,14 @@
 		04E78D1F1E540B4A00B80B57 /* 功能 */ = {
 			isa = PBXGroup;
 			children = (
+				0463B0791E5D2EBA00E6985C /* FunctionViewController.h */,
+				0463B07A1E5D2EBA00E6985C /* FunctionViewController.m */,
+				0463B0801E5D339400E6985C /* Ibeacon */,
+				0463B07F1E5D338A00E6985C /* 百度鹰眼 */,
+				0463B07E1E5D338400E6985C /* 地图 */,
+				0463B07D1E5D333A00E6985C /* 后台持续定位 */,
+				0463B07C1E5D333200E6985C /* 语音识别 */,
+				0463B0781E5D2E7B00E6985C /* 人脸识别 */,
 				043D47561E5541D30086ACE9 /* FMDB封装 */,
 			);
 			name = "功能";
@@ -274,13 +386,12 @@
 		04E78D201E540B5000B80B57 /* 控件 */ = {
 			isa = PBXGroup;
 			children = (
-				043D47E11E559E7A0086ACE9 /* 日历 */,
 				04E78D441E540C7600B80B57 /* cntrolList.h */,
 				04E78D451E540C7600B80B57 /* cntrolList.m */,
+				046058E11E6555EC0018FF0A /* 输入框 */,
+				043D47E11E559E7A0086ACE9 /* 自定义日历 */,
 				04E78D3E1E540C4C00B80B57 /* ljhDatePickerBtn.h */,
 				04E78D3F1E540C4C00B80B57 /* ljhDatePickerBtn.m */,
-				04E78D401E540C4C00B80B57 /* ljhDatePickerTextField.h */,
-				04E78D411E540C4C00B80B57 /* ljhDatePickerTextField.m */,
 				04E78D221E540B5D00B80B57 /* 拍照 */,
 				04E78D211E540B5800B80B57 /* 按钮 */,
 			);
@@ -303,6 +414,8 @@
 		04E78D221E540B5D00B80B57 /* 拍照 */ = {
 			isa = PBXGroup;
 			children = (
+				0463B0821E5D33BD00E6985C /* 多选拍照 */,
+				0463B0811E5D33B100E6985C /* 遮罩层拍照 */,
 				04E78D2F1E540B7E00B80B57 /* Img */,
 				04E78D2C1E540B7C00B80B57 /* takePhotoViewController.h */,
 				04E78D2D1E540B7C00B80B57 /* takePhotoViewController.m */,
@@ -631,12 +744,17 @@
 				04E78CEC1E5408E400B80B57 /* ViewController.m in Sources */,
 				04E78D2A1E540B7000B80B57 /* ljhSingleChooseBtn.m in Sources */,
 				04E78D431E540C4C00B80B57 /* ljhDatePickerTextField.m in Sources */,
+				0463B07B1E5D2EBA00E6985C /* FunctionViewController.m in Sources */,
 				04E78D1A1E5409B800B80B57 /* mycell.m in Sources */,
 				04E78CE91E5408E400B80B57 /* AppDelegate.m in Sources */,
 				04E78D2B1E540B7000B80B57 /* ButtonViewController.m in Sources */,
+				046058F11E655CC60018FF0A /* ljhPWtextField.m in Sources */,
+				046058E41E6556040018FF0A /* ljhtextFieldWithList.m in Sources */,
+				0463B0871E5D3D0C00E6985C /* ViewListVC.m in Sources */,
 				04E78CE61E5408E400B80B57 /* main.m in Sources */,
 				04EE89761E5456F3000FB88C /* AVViewController.m in Sources */,
 				04E78D291E540B7000B80B57 /* ljhCheckbox.m in Sources */,
+				046058F41E6560810018FF0A /* textFieldVC.m in Sources */,
 				04E78D461E540C7600B80B57 /* cntrolList.m in Sources */,
 				04E78D2E1E540B7C00B80B57 /* takePhotoViewController.m in Sources */,
 				04E78D421E540C4C00B80B57 /* ljhDatePickerBtn.m in Sources */,

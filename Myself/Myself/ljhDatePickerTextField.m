@@ -24,7 +24,7 @@
     UIButton *cancleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     cancleBtn.frame = CGRectMake(4, 5, 40, 25);
     [cancleBtn setTitleColor:self.tintColor forState:UIControlStateNormal];
-    [cancleBtn addTarget:[self getCurrentViewController:self]action:@selector(dismissKeyBoard:) forControlEvents:UIControlEventTouchUpInside];
+    [cancleBtn addTarget:self action:@selector(dismissKeyB:) forControlEvents:UIControlEventTouchUpInside];
     [cancleBtn setTitle:@"取消" forState:UIControlStateNormal];
     cancleBtn.tag=101;
     UIBarButtonItem *cancelBarBtn = [[UIBarButtonItem alloc]initWithCustomView:cancleBtn];
@@ -33,7 +33,7 @@
     UIButton *confirmBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     confirmBtn.frame = CGRectMake(4, 5, 40, 25);
     [confirmBtn setTitleColor:self.tintColor forState:UIControlStateNormal];
-    [confirmBtn addTarget:[self getCurrentViewController:self] action:@selector(dismissKeyBoard:) forControlEvents:UIControlEventTouchUpInside];
+    [confirmBtn addTarget:self action:@selector(dismissKeyB:) forControlEvents:UIControlEventTouchUpInside];
     [confirmBtn setTitle:@"完成" forState:UIControlStateNormal];
     confirmBtn.tag=201;
     UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc]initWithCustomView:confirmBtn];
@@ -72,7 +72,7 @@
     self.finishBlock([formatter stringFromDate:kdatePicker.date]);
 
 }
--(void)dismissKeyBoard:(UIButton *)btn
+-(void)dismissKeyB:(UIButton *)btn
 {
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -80,6 +80,7 @@
     
     if (btn.tag==201) {
         self.finishBlock([formatter stringFromDate:datePicker.date]);
+        self.text=[NSString stringWithFormat:@"%@",[formatter stringFromDate:datePicker.date]];
     }
     [self endEditing:YES];
 }
